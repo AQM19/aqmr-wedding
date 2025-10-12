@@ -1,15 +1,19 @@
+'use client'
+
 import { playfair } from '@/lib'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const routing = [
     {
         name: "Ceremonia",
         href: "#ceremony",
+        className: 'hidden lg:block'
     },
     {
         name: "RVSP",
         href: "#rsvp",
+        className: 'hidden lg:block'
     },
     {
         name: "A&M",
@@ -19,16 +23,46 @@ const routing = [
     {
         name: "Venue",
         href: "#venue",
+        className: 'hidden lg:block'
     },
     {
         name: "Galería",
         href: "#galería",
+        className: 'hidden lg:block'
     }
 ]
 
 const Header = () => {
+
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50)
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+            const offset = 80
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.pageYOffset - offset
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            })
+            setIsMobileMenuOpen(false)
+        }
+    }
+
     return (
-        <header className='w-full backdrop-filter backdrop-blur fixed top-0 z-50 bg-bone_carver/80'>
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
+            }`}>
             <nav className='max-w-2/3 mx-auto'>
                 <ul className={`flex flex-row justify-evenly items-center p-4 font-thin antialiased ${playfair.className}`}>
 

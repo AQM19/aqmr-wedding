@@ -6,6 +6,22 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'hotelcasadelmarques.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.apartamentos3000.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'fotos.hoteles.net'
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh4.googleusercontent.com'
       }
     ]
   }

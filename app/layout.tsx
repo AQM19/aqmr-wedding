@@ -1,12 +1,13 @@
 import "./globals.css";
-import { env } from "process";
-import Footer from "@/components/footer/footer";
 import Header from "@/components/header/header";
+import { playfair } from "@/lib";
+import { montserrat } from "@/lib/fonts/montserrat";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Invitación de boda - Aarón & Merce",
-  description: `Estás invitado a nuestra boda el ${env.WEDDING_DAY}-${env.WEDDING_MONTH}-${env.WEDDING_YEAR} en Cantabria. ¡Nos encantaría contar con tu presencia en este día tan especial!`,
+  title: "Aarón & Merce - Nuestra boda",
+  description: `¡Nos casamos! Celebra con nosotros nuestro gran día`,
   authors: [
     {
       name: "Aarón Quintanal Martín",
@@ -22,14 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body
-        className={`antialiased bg-bone_carver text-night_court`}
-      >
-        <Header></Header>
-        <main>
+      <body className={`font-sans ${playfair.variable} ${montserrat.variable} antialiased`}>
+        <Suspense fallback={<div>Cargando...</div>}>
           {children}
-        </main>
-        {/* <Footer></Footer> */}
+        </Suspense>
       </body>
     </html>
   );
