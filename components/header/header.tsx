@@ -11,8 +11,8 @@ const routing = [
         className: 'hidden lg:block'
     },
     {
-        name: "RVSP",
-        href: "#rsvp",
+        name: "Restaurante",
+        href: "#restaurant",
         className: 'hidden lg:block'
     },
     {
@@ -27,7 +27,7 @@ const routing = [
     },
     {
         name: "Galería",
-        href: "#galería",
+        href: "galery",
         className: 'hidden lg:block'
     }
 ]

@@ -3,8 +3,9 @@
 import Header from "@/components/header/header";
 import { fleurDeLeah } from "@/lib";
 import CeremonySection from "@/pages/ceremony/ceremony-section";
+import FormsSection from "@/pages/forms/forms-section";
 import HeroSection from "@/pages/hero/hero-section";
-import StorySection from "@/pages/story/story-section";
+import RestaurantSection from "@/pages/restaurant/restaurant-section";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -46,10 +47,9 @@ export default function Home() {
           <main className="min-h-screen">
             <Header></Header>
             <HeroSection />
-            <StorySection />
             <CeremonySection />
-            {/* <RestaurantSection /> */}
-            {/* <FormsSection /> */}
+            <RestaurantSection />
+            <FormsSection />
             {/* <Footer /> */}
           </main>
         )

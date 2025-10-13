@@ -22,6 +22,26 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'lh4.googleusercontent.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.fincadesanjuan.es'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn0.bodas.net'
+      },
+      {
+        protocol: 'https',
+        hostname: 'dynamic-media-cdn.tripadvisor.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'encrypted-tbn0.gstatic.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'photos.app.goo.gl'
       }
     ]
   }
