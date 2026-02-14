@@ -23,22 +23,22 @@ const Footer = () => {
                         </p>
                         <div className="space-y-3">
                             <a
-                                href="mailto:boda@aaronmerce.com"
+                                href="mailto:aqmr.house@gmail.com"
                                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors justify-center md:justify-start group"
                             >
                                 <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
                                     <Mail className="w-4 h-4 text-primary" />
                                 </div>
-                                <span className="text-sm">boda@aaronmerce.com</span>
+                                <span className="text-sm">aqmr.house@gmail.com</span>
                             </a>
                             <a
-                                href="tel:+34600000000"
+                                href="tel:+34635770481"
                                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors justify-center md:justify-start group"
                             >
                                 <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
                                     <Phone className="w-4 h-4 text-primary" />
                                 </div>
-                                <span className="text-sm">+34 600 000 000</span>
+                                <span className="text-sm">+34 635 770 481</span>
                             </a>
                         </div>
                     </div>
@@ -62,13 +62,7 @@ const Footer = () => {
                                 Celebración
                             </a>
                             <a
-                                href="#dress-code"
-                                className="block text-muted-foreground hover:text-primary transition-colors text-sm"
-                            >
-                                Dress Code
-                            </a>
-                            <a
-                                href="#itinerario"
+                                href="#itinerary"
                                 className="block text-muted-foreground hover:text-primary transition-colors text-sm"
                             >
                                 Itinerario
@@ -95,10 +89,6 @@ const Footer = () => {
                             <div>
                                 <p className="font-semibold text-foreground mb-1">Fecha límite RSVP</p>
                                 <p className="text-xs">15 de Mayo, 2026</p>
-                            </div>
-                            <div>
-                                <p className="font-semibold text-foreground mb-1">Código de vestimenta</p>
-                                <p className="text-xs">Etiqueta de tarde</p>
                             </div>
                             <div>
                                 <p className="font-semibold text-foreground mb-1">Parking</p>
