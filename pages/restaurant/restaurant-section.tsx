@@ -60,7 +60,7 @@ const RestaurantSection = () => {
                                 Finca de San Juan Hostería & Catering
                             </h3>
                             <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-8 text-justify">
-                                Después de la ceremonia, continuaremos la celebración en Finca de San Juan Hostería & Catering,
+                                Después de la ceremonia, continuaremos la celebración en <b>Finca de San Juan Hostería & Catering</b>,
                                 un espacio único rodeado de naturaleza donde compartiremos un cóctel, una deliciosa comida y
                                 bailaremos hasta el anochecer. ¡Prepárate para una tarde inolvidable!
                             </p>
@@ -116,7 +116,7 @@ const RestaurantSection = () => {
                             rel="noopener noreferrer"
                             className="block"
                         >
-                            <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg font-medium py-4 rounded-xl gap-2 flex flex-row items-center justify-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]">
+                            <button className="w-full cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg font-medium py-4 rounded-xl gap-2 flex flex-row items-center justify-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]">
                                 <MapPin className="w-5 h-5" />
                                 Ver ubicación en Google Maps
                             </button>

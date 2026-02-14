@@ -67,7 +67,7 @@ const CeremonySection = () => {
                             </h3>
                             <p className="text-muted-foreground leading-relaxed text-base md:text-lg mb-8 text-justify">
                                 Nos encantaría que nos acompañarais en este momento tan especial. La ceremonia tendrá lugar en la
-                                hermosa Iglesia de San Jorge, un lugar lleno de historia y belleza que hemos elegido para comenzar
+                                hermosa <b>Iglesia de San Jorge</b>, un lugar lleno de historia y belleza que hemos elegido para comenzar
                                 nuestra vida juntos.
                             </p>
 
@@ -108,7 +108,7 @@ const CeremonySection = () => {
                             rel="noopener noreferrer"
                             className="block"
                         >
-                            <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg font-medium py-4 rounded-xl gap-2 flex flex-row items-center justify-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]">
+                            <button className="w-full cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg font-medium py-4 rounded-xl gap-2 flex flex-row items-center justify-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]">
                                 <MapPin className="w-5 h-5" />
                                 Ver ubicación en Google Maps
                             </button>
