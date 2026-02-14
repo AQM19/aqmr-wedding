@@ -147,8 +147,8 @@ const FormsSection = () => {
                                 type="button"
                                 onClick={() => handleInputChange('attending', 'yes')}
                                 className={`p-4 rounded-xl border-2 transition-all duration-300 ${rsvpForm.attending === 'yes'
-                                        ? 'border-primary bg-primary text-primary-foreground shadow-md'
-                                        : 'border-border bg-background hover:border-primary/50'
+                                    ? 'border-primary bg-primary text-primary-foreground shadow-md'
+                                    : 'border-border bg-background hover:border-primary/50'
                                     }`}
                             >
                                 <div className="text-2xl mb-2">✓</div>
@@ -158,8 +158,8 @@ const FormsSection = () => {
                                 type="button"
                                 onClick={() => handleInputChange('attending', 'no')}
                                 className={`p-4 rounded-xl border-2 transition-all duration-300 ${rsvpForm.attending === 'no'
-                                        ? 'border-primary bg-primary text-primary-foreground shadow-md'
-                                        : 'border-border bg-background hover:border-primary/50'
+                                    ? 'border-primary bg-primary text-primary-foreground shadow-md'
+                                    : 'border-border bg-background hover:border-primary/50'
                                     }`}
                             >
                                 <div className="text-2xl mb-2">✗</div>
@@ -253,7 +253,7 @@ const FormsSection = () => {
                         <span className="font-semibold text-foreground">Fecha límite de confirmación:</span> 15 de Mayo, 2026
                     </p>
                     <p className="text-xs text-muted-foreground mt-2 italic">
-                        Si tienes cualquier duda, escríbenos a: <a href="mailto:boda@aaronmerce.com" className="text-primary hover:underline">boda@aaronmerce.com</a>
+                        Si tienes cualquier duda, escríbenos a: <a href="mailto:aqmr@house@gmail.com" className="text-primary hover:underline">aqmr@house@gmail.com</a>
                     </p>
                 </div>
             </div>
