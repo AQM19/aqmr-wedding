@@ -70,7 +70,7 @@ const Header = () => {
                         routing.map((route) => (
                             <li key={route.name}>
                                 <Link href={route.href}>
-                                    <span className={`text-md text-archeron transition-all ${route.className ?? ''}`}>
+                                    <span className={`text-md ${isScrolled ? "text-archeron" : "text-white"} transition-all duration-300 ${route.className ?? ''}`}>
                                         {route.name}
                                     </span>
                                 </Link>

@@ -45,13 +45,13 @@ const HeroSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 text-center px-4 animate-fade-in-up">
-                <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-white mb-8 tracking-tight text-balance">
+            <div className="relative z-10 text-center animate-fade-in-up">
+                <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl text-white mb-8 tracking-tight text-balance">
                     Aarón & Merce
                 </h1>
 
                 {/* Countdown */}
-                <div className="flex gap-4 md:gap-8 justify-center mb-8">
+                <div className="flex md:gap-8 gap-1 justify-center mb-8">
                     {[
                         { value: timeLeft.days, label: "Días" },
                         { value: timeLeft.hours, label: "Horas" },
