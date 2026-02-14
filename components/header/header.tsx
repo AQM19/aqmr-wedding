@@ -26,8 +26,8 @@ const routing = [
         className: 'hidden lg:block'
     },
     {
-        name: "Galería",
-        href: "galery",
+        name: "Itinerario",
+        href: "#itinerary",
         className: 'hidden lg:block'
     }
 ]
