@@ -2,6 +2,7 @@
 
 import { Check, Heart, Users, Mail } from 'lucide-react'
 import React, { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 interface RSVPForm {
     name: string
@@ -24,32 +25,59 @@ const FormsSection = () => {
 
     const [submitted, setSubmitted] = useState(false)
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const [error, setError] = useState<string | null>(null)
 
     const handleRSVPSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         setIsSubmitting(true)
+        setError(null)
 
-        // Simular envío - aquí deberías conectar con tu API
-        console.log("RSVP Form:", rsvpForm)
+        try {
+            // Preparar datos para EmailJS
+            const templateParams = {
+                from_name: rsvpForm.name,
+                from_email: rsvpForm.email,
+                attending: rsvpForm.attending === 'yes' ? '✅ SÍ asistirá' : '❌ NO podrá asistir',
+                guests: rsvpForm.guests.toString(),
+                allergies: rsvpForm.allergies || 'Ninguna',
+                message: rsvpForm.message || 'Sin mensaje',
+                submission_date: new Date().toLocaleString('es-ES', {
+                    dateStyle: 'full',
+                    timeStyle: 'short'
+                })
+            }
 
-        // Simulación de delay de red
-        await new Promise(resolve => setTimeout(resolve, 1500))
+            // Enviar email usando EmailJS
+            const result = await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                templateParams,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            )
 
-        setSubmitted(true)
-        setIsSubmitting(false)
+            console.log('Email enviado exitosamente:', result.text);
 
-        // Reset después de 5 segundos
-        setTimeout(() => {
-            setSubmitted(false)
-            setRSVPForm({
-                name: '',
-                email: '',
-                attending: '',
-                guests: 1,
-                allergies: '',
-                message: ''
-            })
-        }, 5000)
+            setSubmitted(true)
+
+            // Reset después de 5 segundos
+            setTimeout(() => {
+                setSubmitted(false)
+                setRSVPForm({
+                    name: '',
+                    email: '',
+                    attending: '',
+                    guests: 1,
+                    allergies: '',
+                    message: ''
+                })
+            }, 5000)
+
+        } catch (error: any) {
+            console.error('Error al enviar email:', error)
+            setError('Hubo un error al enviar tu confirmación. Por favor, inténtalo de nuevo o contáctanos directamente.')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     const handleInputChange = (field: keyof RSVPForm, value: string | number) => {
@@ -61,7 +89,7 @@ const FormsSection = () => {
             <section id="confirmacion" className="py-20 md:py-32 px-4 bg-gradient-to-b from-secondary/30 to-background">
                 <div className="max-w-2xl mx-auto">
                     <div className="text-center p-12 bg-card border-primary/20 border-2 rounded-2xl animate-scale-in">
-                        <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
                             <Check className="w-10 h-10 text-primary" />
                         </div>
                         <h3 className="font-serif text-4xl text-primary mb-4">
@@ -75,6 +103,9 @@ const FormsSection = () => {
                         <p className="text-sm text-muted-foreground">
                             Hemos recibido tu confirmación correctamente.
                         </p>
+                        <div className="mt-6 text-xs text-muted-foreground italic">
+                            💌 También te enviamos un email de confirmación
+                        </div>
                     </div>
                 </div>
             </section>
@@ -99,6 +130,13 @@ const FormsSection = () => {
                         Tu presencia es el mejor regalo. Por favor, ayúdanos a organizar el día perfecto
                     </p>
                 </div>
+
+                {/* Error message */}
+                {error && (
+                    <div className="mb-6 p-4 bg-destructive/10 border-l-4 border-destructive rounded-r-lg animate-fade-in-up">
+                        <p className="text-destructive text-sm font-medium">{error}</p>
+                    </div>
+                )}
 
                 {/* Form */}
                 <form onSubmit={handleRSVPSubmit} className="p-8 md:p-10 bg-card border-primary/20 border-2 rounded-2xl shadow-lg space-y-6">
@@ -147,8 +185,8 @@ const FormsSection = () => {
                                 type="button"
                                 onClick={() => handleInputChange('attending', 'yes')}
                                 className={`p-4 rounded-xl border-2 transition-all duration-300 ${rsvpForm.attending === 'yes'
-                                    ? 'border-primary bg-primary text-primary-foreground shadow-md'
-                                    : 'border-border bg-background hover:border-primary/50'
+                                    ? 'border-primary bg-primary text-primary-foreground shadow-md scale-105'
+                                    : 'border-border bg-background hover:border-primary/50 hover:scale-102'
                                     }`}
                             >
                                 <div className="text-2xl mb-2">✓</div>
@@ -158,8 +196,8 @@ const FormsSection = () => {
                                 type="button"
                                 onClick={() => handleInputChange('attending', 'no')}
                                 className={`p-4 rounded-xl border-2 transition-all duration-300 ${rsvpForm.attending === 'no'
-                                    ? 'border-primary bg-primary text-primary-foreground shadow-md'
-                                    : 'border-border bg-background hover:border-primary/50'
+                                    ? 'border-primary bg-primary text-primary-foreground shadow-md scale-105'
+                                    : 'border-border bg-background hover:border-primary/50 hover:scale-102'
                                     }`}
                             >
                                 <div className="text-2xl mb-2">✗</div>
@@ -178,7 +216,7 @@ const FormsSection = () => {
                                 id="guests"
                                 value={rsvpForm.guests}
                                 onChange={(e) => handleInputChange('guests', parseInt(e.target.value))}
-                                className="w-full border-2 border-border focus:border-primary rounded-xl p-3 text-base transition-colors outline-none bg-background"
+                                className="w-full border-2 border-border focus:border-primary rounded-xl p-3 text-base transition-colors outline-none bg-background cursor-pointer"
                             >
                                 {[1, 2, 3, 4, 5].map(num => (
                                     <option key={num} value={num}>
@@ -202,7 +240,7 @@ const FormsSection = () => {
                                 onChange={(e) => handleInputChange('allergies', e.target.value)}
                                 className="w-full min-h-[100px] border-2 border-border focus:border-primary rounded-xl p-3 text-base transition-colors outline-none resize-none bg-background"
                             />
-                            <p className="text-xs text-muted-foreground">
+                            <p className="text-xs text-muted-foreground italic">
                                 Tu comodidad es importante para nosotros
                             </p>
                         </div>
@@ -253,7 +291,7 @@ const FormsSection = () => {
                         <span className="font-semibold text-foreground">Fecha límite de confirmación:</span> 15 de Mayo, 2026
                     </p>
                     <p className="text-xs text-muted-foreground mt-2 italic">
-                        Si tienes cualquier duda, escríbenos a: <a href="mailto:aqmr@house@gmail.com" className="text-primary hover:underline">aqmr@house@gmail.com</a>
+                        Si tienes cualquier duda, escríbenos a: <a href="mailto:aqmr.house@gmail.com" className="text-primary hover:underline">aqmr.house@gmail.com</a>
                     </p>
                 </div>
             </div>
