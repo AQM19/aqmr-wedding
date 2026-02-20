@@ -1,38 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💍 Aarón & Merce
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+### *5 · Junio · 2026*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+*— Cantabria, España —*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ¿De qué va esto?
 
-## Learn More
+Esta es la página web que hemos creado para nuestra boda. Aquí encontrarás toda la información que necesitas para el gran día: dónde es la ceremonia, dónde celebramos, cómo va el itinerario y el formulario para confirmar asistencia.
 
-To learn more about Next.js, take a look at the following resources:
+Está hecha con mucho cariño (y bastante café) para que el día sea perfecto. 🌿
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📋 Secciones
 
-## Deploy on Vercel
+| Sección | Descripción |
+|---------|-------------|
+| 🏠 **Hero** | Portada con cuenta atrás al 5 de junio |
+| ⛪ **Ceremonia** | Información de la iglesia y hora de inicio |
+| 🥂 **Celebración** | Detalles de la finca y la cena |
+| 🗓️ **Itinerario** | El plan del día, paso a paso |
+| ✉️ **Confirmación** | Formulario de asistencia (¡por favor confirma antes del 15 de mayo!) |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📅 Información del día
 
-aaronandmercesweding.es
+- **Fecha:** 5 de Junio de 2026
+- **Ceremonia:** [Iglesia →](https://maps.app.goo.gl/B2cuaCaPJWnqXjMAA)
+- **Celebración:** [Finca →](https://maps.app.goo.gl/tEY5iPY9zpqQ9tGZ7)
+- **Parking:** Disponible en ambas ubicaciones
+- **RSVP antes del:** 15 de Mayo de 2026
+
+---
+
+## 📬 Contacto
+
+Si tienes cualquier duda antes del día:
+
+- ✉️ [aqmr.house@gmail.com](mailto:aqmr.house@gmail.com)
+- 📞 [+34 635 770 481](tel:+34635770481)
+
+---
+
+## 📸 Hashtag
+
+El día de la boda, comparte tus fotos con:
+
+**#AaronYMerce2026**
+
+---
+
+<div align="center">
+
+*Estamos deseando veros. Gracias por ser parte de este día.* 💛
+
+**Aarón & Merce**
+
+**aaronandmercesweding.es**
+
+</div>
