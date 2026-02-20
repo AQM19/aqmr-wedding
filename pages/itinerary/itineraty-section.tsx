@@ -26,7 +26,7 @@ const ItinerarySection = () => {
 
     const timeline = [
         {
-            time: "11:30",
+            time: "11:45",
             title: "Llegada de invitados",
             description: "Te esperamos en la Iglesia de San Jorge",
             icon: "👋"
@@ -45,13 +45,13 @@ const ItinerarySection = () => {
             icon: "📸"
         },
         {
-            time: "13:30",
+            time: "14:15",
             title: "Cóctel de bienvenida",
             description: "Aperitivos y bebidas en los jardines",
             icon: "🥂"
         },
         {
-            time: "15:00",
+            time: "15:30",
             title: "Banquete",
             description: "Comida nupcial con menú especial",
             icon: "🍽️",
@@ -71,7 +71,7 @@ const ItinerarySection = () => {
             highlight: true
         },
         {
-            time: "23:00",
+            time: "22:30",
             title: "Barra de medianoche",
             description: "Aperitivos calientes y dulces",
             icon: "🌙"

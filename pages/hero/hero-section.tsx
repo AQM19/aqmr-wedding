@@ -103,7 +103,7 @@ const HeroSection = () => {
 
             {/* Scroll Indicator mejorado */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                <a href="#ceremony" className="block group">
+                <a href="#ceremony" className="group flex flex-col items-center">
                     <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-2 group-hover:border-white/70 transition-colors">
                         <div className="w-1 h-3 bg-white/50 rounded-full group-hover:bg-white/80 transition-colors" />
                     </div>
