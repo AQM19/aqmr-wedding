@@ -1,5 +1,4 @@
 import "./globals.css";
-import Header from "@/components/header/header";
 import { playfair } from "@/lib";
 import { montserrat } from "@/lib/fonts/montserrat";
 import type { Metadata } from "next";

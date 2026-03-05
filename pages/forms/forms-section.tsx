@@ -72,7 +72,7 @@ const FormsSection = () => {
                 })
             }, 5000)
 
-        } catch (error: any) {
+        } catch (error) {
             console.error('Error al enviar email:', error)
             setError('Hubo un error al enviar tu confirmación. Por favor, inténtalo de nuevo o contáctanos directamente.')
         } finally {

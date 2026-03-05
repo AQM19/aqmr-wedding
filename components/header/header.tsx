@@ -35,7 +35,7 @@ const routing = [
 const Header = () => {
 
     const [isScrolled, setIsScrolled] = useState(false)
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [_, setIsMobileMenuOpen] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,21 +44,6 @@ const Header = () => {
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
-
-    const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-            const offset = 80
-            const elementPosition = element.getBoundingClientRect().top
-            const offsetPosition = elementPosition + window.pageYOffset - offset
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-            })
-            setIsMobileMenuOpen(false)
-        }
-    }
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300  ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
