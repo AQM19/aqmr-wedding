@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import { host } from "./config";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(host),
   title: "Aarón & Merce - Nuestra boda",
   description: `¡Nos casamos! Celebra con nosotros nuestro gran día`,
   authors: [
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${host}/imgs/romantic-wedding-venue-sunset-elegant.jpg`,
+        url: "/imgs/romantic-wedding-venue-sunset-elegant.jpg",
         width: 800,
         height: 600,
         alt: "Imagen de la boda de Aarón y Merce",
@@ -36,7 +37,12 @@ export const metadata: Metadata = {
     site: '@AQuintanalMDev',
     creator: '@AQuintanalMDev',
     images: [
-      `${host}/imgs/romantic-wedding-venue-sunset-elegant.jpg`
+      {
+        url: "/imgs/romantic-wedding-venue-sunset-elegant.jpg",
+        width: 800,
+        height: 600,
+        alt: "Imagen de la boda de Aarón y Merce",
+      }
     ]
   },
   alternates: {
@@ -45,15 +51,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   appleWebApp: {
     title: 'Aarón & Merce - Nuestra boda',
