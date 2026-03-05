@@ -3,70 +3,34 @@ import { playfair } from "@/lib";
 import { montserrat } from "@/lib/fonts/montserrat";
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { host } from "./config";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(host),
+  metadataBase: new URL("https://aaronandmercesweding.es/"),
+
   title: "Aarón & Merce - Nuestra boda",
-  description: `¡Nos casamos! Celebra con nosotros nuestro gran día`,
-  authors: [
-    {
-      name: 'Aarón Quintanal Martín',
-      url: host
-    }
-  ],
-  keywords: ["Aarón Quintanal Martín", "Mercedes Ríos Gutiérrez", "boda", "celebración", "amor", "compromiso", "familia", "amigos", "evento", "invitación", "ceremonia", "fiesta", "recuerdos", "momentos especiales"],
+  description: "¡Nos casamos! Celebra con nosotros nuestro gran día",
+
   openGraph: {
-    title: "Aarón & Merce - Nuestra boda",
-    description: `¡Nos casamos! Celebra con nosotros nuestro gran día`,
-    url: host,
     type: "website",
-    images: [
-      {
-        url: "/imgs/romantic-wedding-venue-sunset-elegant.jpg",
-        width: 800,
-        height: 600,
-        alt: "Imagen de la boda de Aarón y Merce",
-      }
-    ]
-  },
-  twitter: {
-    card: "summary_large_image",
     title: "Aarón & Merce - Nuestra boda",
-    description: `¡Nos casamos! Celebra con nosotros nuestro gran día`,
-    site: '@AQuintanalMDev',
-    creator: '@AQuintanalMDev',
+    description: "¡Nos casamos! Celebra con nosotros nuestro gran día",
+    url: "/",
     images: [
       {
         url: "/imgs/romantic-wedding-venue-sunset-elegant.jpg",
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: "Imagen de la boda de Aarón y Merce",
-      }
-    ]
-  },
-  alternates: {
-    canonical: host,
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  appleWebApp: {
-    title: 'Aarón & Merce - Nuestra boda',
-    statusBarStyle: 'black-translucent',
-    startupImage: [
-      '/imgs/romantic-wedding-venue-sunset-elegant.jpg',
-      {
-        url: '/assets/imgs/romantic-wedding-venue-sunset-elegant.jpg',
-        media: '(device-width: 768px) and (device-height: 1024px)',
       },
     ],
   },
-  assets: [
-    `${host}/assets`,
-  ],
-  category: 'wedding',
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Aarón & Merce - Nuestra boda",
+    description: "¡Nos casamos! Celebra con nosotros nuestro gran día",
+    images: ["/imgs/romantic-wedding-venue-sunset-elegant.jpg"],
+  },
 };
 
 export default function RootLayout({
