@@ -111,7 +111,7 @@ const RestaurantSection = () => {
 
                         {/* Botón mejorado */}
                         <a
-                            href="https://maps.app.goo.gl/tEY5iPY9zpqQ9tGZ7"
+                            href="https://maps.app.goo.gl/Y3yeaXHXJ4wGTA7c8"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block"

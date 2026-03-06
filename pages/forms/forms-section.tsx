@@ -6,7 +6,6 @@ import emailjs from '@emailjs/browser'
 
 interface RSVPForm {
     name: string
-    email: string
     attending: 'yes' | 'no' | ''
     guests: number
     allergies: string
@@ -16,7 +15,6 @@ interface RSVPForm {
 const FormsSection = () => {
     const [rsvpForm, setRSVPForm] = useState<RSVPForm>({
         name: '',
-        email: '',
         attending: '',
         guests: 1,
         allergies: '',
@@ -36,7 +34,6 @@ const FormsSection = () => {
             // Preparar datos para EmailJS
             const templateParams = {
                 from_name: rsvpForm.name,
-                from_email: rsvpForm.email,
                 attending: rsvpForm.attending === 'yes' ? '✅ SÍ asistirá' : '❌ NO podrá asistir',
                 guests: rsvpForm.guests.toString(),
                 allergies: rsvpForm.allergies || 'Ninguna',
@@ -64,7 +61,6 @@ const FormsSection = () => {
                 setSubmitted(false)
                 setRSVPForm({
                     name: '',
-                    email: '',
                     attending: '',
                     guests: 1,
                     allergies: '',
@@ -158,23 +154,6 @@ const FormsSection = () => {
                         />
                     </div>
 
-                    {/* Email */}
-                    <div className="space-y-2">
-                        <label htmlFor="email" className="text-foreground text-base font-semibold flex items-center gap-2">
-                            <Mail className="w-4 h-4 text-primary" />
-                            Correo electrónico *
-                        </label>
-                        <input
-                            id="email"
-                            type="email"
-                            placeholder="tu@email.com"
-                            value={rsvpForm.email}
-                            onChange={(e) => handleInputChange('email', e.target.value)}
-                            required
-                            className="w-full border-2 border-border focus:border-primary rounded-xl p-3 text-base transition-colors outline-none bg-background"
-                        />
-                    </div>
-
                     {/* Asistencia */}
                     <div className="space-y-3">
                         <label className="text-foreground text-base font-semibold block">
@@ -263,7 +242,7 @@ const FormsSection = () => {
                     {/* Botón enviar */}
                     <button
                         type="submit"
-                        disabled={isSubmitting || !rsvpForm.name || !rsvpForm.email || !rsvpForm.attending}
+                        disabled={isSubmitting || !rsvpForm.name || !rsvpForm.attending}
                         className="w-full bg-primary hover:bg-primary/90 disabled:bg-muted disabled:cursor-not-allowed text-primary-foreground disabled:text-muted-foreground text-lg font-semibold py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                     >
                         {isSubmitting ? (

@@ -76,7 +76,7 @@ const HeroSection = () => {
                         ].map((item, index) => (
                             <div
                                 key={index}
-                                className="glass-card rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px] transform hover:scale-105 transition-transform duration-300 animate-fade-in-up"
+                                className="glass-card rounded-xl p-2 md:p-6 min-w-[70px] md:min-w-[100px] transform hover:scale-105 transition-transform duration-300 animate-fade-in-up"
                                 style={{ animationDelay: `${index * 0.1}s` }}
                             >
                                 <div className="font-serif text-3xl md:text-5xl text-primary font-bold">

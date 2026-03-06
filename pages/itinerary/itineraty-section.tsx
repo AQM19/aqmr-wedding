@@ -65,14 +65,14 @@ const ItinerarySection = () => {
         },
         {
             time: "18:30",
-            title: "Fiesta",
+            title: "Fiesta y barra libre",
             description: "¡A bailar hasta que el cuerpo aguante!",
             icon: "💃",
             highlight: true
         },
         {
-            time: "22:30",
-            title: "Barra de medianoche",
+            time: "22:00",
+            title: "Recena",
             description: "Aperitivos calientes y dulces",
             icon: "🌙"
         }

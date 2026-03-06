@@ -103,7 +103,7 @@ const CeremonySection = () => {
 
                         {/* Botón mejorado */}
                         <a
-                            href="https://maps.app.goo.gl/B2cuaCaPJWnqXjMAA"
+                            href="https://maps.app.goo.gl/XR5r7w2f6cafERiD8"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block"

@@ -30,7 +30,7 @@ const CornerOrnament = ({ className }: { className: string }) => (
     </svg>
 )
 
-export default function ImageSlider({ images, interval = 3000, className = '', height = 'h-[400px]', objectFit = 'cover' }: ImageSliderProps) {
+export default function ImageSlider({ images, interval = 3000, className = '', height = 'h-[200px] md:h-[400px]', objectFit = 'cover' }: ImageSliderProps) {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const nextSlide = useCallback(() => {
