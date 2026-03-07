@@ -100,7 +100,7 @@ const FormsSection = () => {
                             Hemos recibido tu confirmación correctamente.
                         </p>
                         <div className="mt-6 text-xs text-muted-foreground italic">
-                            💌 También te enviamos un email de confirmación
+                            💌 También te enviamos un email de confirmación.
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ const FormsSection = () => {
                         <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-primary/40"></div>
                     </div>
                     <p className="text-muted-foreground text-base md:text-lg">
-                        Tu presencia es el mejor regalo. Por favor, ayúdanos a organizar el día perfecto
+                        Tu presencia es el mejor regalo. Por favor, ayúdanos a organizar el día perfecto.
                     </p>
                 </div>
 

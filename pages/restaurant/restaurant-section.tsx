@@ -88,7 +88,7 @@ const RestaurantSection = () => {
                                     <div className="flex-1">
                                         <p className="font-semibold text-foreground mb-1 text-base">Hora</p>
                                         <p className="text-muted-foreground text-sm">
-                                            13:30h - Aperitivo y celebración
+                                            14:15h - Aperitivo y celebración
                                         </p>
                                     </div>
                                 </div>
